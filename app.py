@@ -1,6 +1,10 @@
-from how import how
-from what import what
-from who import who
-import random
+import os
+from pick import pickacon
 
-print(random.choice(who) + " using " + random.choice(how) + " to " + random.choice(what) + ".")
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    response = pickacon()
+    return response
