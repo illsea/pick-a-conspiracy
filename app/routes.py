@@ -1,11 +1,9 @@
 import os
-from pick import pickacon
+from app import pick
 from flask import render_template
 
-from flask import Flask
-app = Flask(__name__)
 
 @app.route('/')
 def pick_con():
-    response = pickacon()
+    response = pick.pickacon()
     return render_template('index.html', title="Create-A-Conspiracy", response = response)
