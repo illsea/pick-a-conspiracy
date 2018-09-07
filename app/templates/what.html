@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>What did they do?</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.what }}<br>
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+    <p>{{ what_list }}</p>
+{% endblock %}

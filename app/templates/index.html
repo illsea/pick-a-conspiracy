@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <h1>{{ response }}</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h1>Wake Up!</h1>
+    <h2>{{ response }}</h2>
+    <a href="/">More uncensored news</a>
+{% endblock %}
