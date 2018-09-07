@@ -1,5 +1,7 @@
 from app import app
 from app import pick
+from faker import Faker
+
 from flask import render_template, flash, redirect, url_for
 from app.forms import WhoForm
 from app.forms import WhatForm
@@ -13,12 +15,27 @@ from app.what import what as what_list
 @app.route('/')
 @app.route('/index')
 def index():
+    fake = Faker()
     response1 = pick.pickacon()
     response2 = pick.pickacon()
     response3 = pick.pickacon()
     response4 = pick.pickacon()
     response5 = pick.pickacon()
-    return render_template('newbase.html', title="Create-A-Conspiracy", response1 = response1, response2 = response2, response3 = response3, response4 = response4, response5 = response5)
+    randomtext = fake.text() + " " + fake.text() + " " + fake.text() + " " + fake.text()
+    randomtext1 = fake.text() + " " + fake.text() + " " + fake.text() + " " + fake.text()
+    randomtext2 = fake.text() + " " + fake.text() + " " + fake.text() + " " + fake.text()
+    randomtext3 = fake.text() + " " + fake.text() + " " + fake.text() + " " + fake.text()
+    randomtext4 = fake.text() + " " + fake.text() + " " + fake.text() + " " + fake.text()
+    name = fake.name()
+    name1 = fake.name()
+    name2 = fake.name()
+    name3 = fake.name()
+    name4 = fake.name()
+
+    return render_template('newbase.html', title="Create-A-Conspiracy", response1 = response1, response2 = response2,
+     response3 = response3, response4 = response4, response5 = response5, randomtext = randomtext,
+     randomtext1 = randomtext1, randomtext2 = randomtext2, randomtext3 = randomtext3, randomtext4 = randomtext4, name=name,
+     name1 = name1, name2= name2, name3=name3, name4=name4)
 
 @app.route('/who', methods=['GET', 'POST'])
 def who():

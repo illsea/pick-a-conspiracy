@@ -73,7 +73,7 @@ p{
 }
 .collumn .headline.hl1{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 28px;
     text-transform: uppercase;
     padding: 10px 0 10px 0;
 
@@ -108,7 +108,7 @@ p{
 .collumn .headline.hl3{
     font-weight: 400;
     font-style: italic;
-    font-size: 36px;
+    font-size: 28px;
     box-sizing: border-box;
     padding: 10px 0 10px 0;
 }
@@ -138,7 +138,7 @@ p{
 
 .collumn .headline.hl5{
     font-weight: 400;
-    font-size: 32px;
+    font-size: 28px;
     text-transform: uppercase;
     font-style: italic;
     box-sizing: border-box;
